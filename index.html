@@ -1,183 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>my Portfolio</title>
+  <meta charset="UTF-8">
+  <title>You Are My World vinayaka</title>
   <style>
-    * {
+    body {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
+      background: linear-gradient(to right, #ffdde1, #ee9ca7);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       font-family: 'Segoe UI', sans-serif;
     }
 
-    body {
-      background: #f4f4f4;
-      color: #333;
-    }
-
-    header {
-      background: linear-gradient(to right, #4e54c8, #8f94fb);
-      color: black;
-      padding: 40px 20px;
+    .container {
       text-align: center;
+      color: white;
+      animation: fadeIn 3s ease-in-out;
     }
 
-    header img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      border: 4px solid white;
-      margin-bottom: 15px;
+    h1 {
+      font-size: 3em;
+      margin: 20px 0;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
     }
 
-    header h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 1.2em;
-      margin-bottom: 5px;
-    }
-
-    section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    h2 {
-      color: #4e54c8;
-      margin-bottom: 20px;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 5px;
-    }
-
-    .skills span {
+    .heart {
+      width: 100px;
+      height: 90px;
+      position: relative;
       display: inline-block;
-      background: #8f94fb;
-      color: black;
-      padding: 8px 12px;
-      margin: 5px;
-      border-radius: 20px;
-      font-size: 0.95em;
+      animation: beat 1s infinite;
     }
 
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 90px;
+      background: red;
+      border-radius: 50px 50px 0 0;
+      top: 0;
+      left: 0;
     }
 
-    .project-card {
-      background: black;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.2s ease;
+    .heart::after {
+      left: 50px;
     }
 
-    .project-card:hover {
-      transform: translateY(-5px);
+    .heart {
+      transform: rotate(-45deg);
+      background: red;
     }
 
-    .contact form {
-      display: flex;
-      flex-direction: column;
+    @keyframes beat {
+      0%, 100% {
+        transform: scale(1) rotate(-45deg);
+      }
+      50% {
+        transform: scale(1.2) rotate(-45deg);
+      }
     }
 
-    .contact input, .contact textarea {
-      padding: 10px;
-      margin-bottom: 15px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-
-    .contact button {
-      background: #1198aa;
-      color: black;
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 1em;
-    }
-
-    footer {
-      background: #333;
-      color: black;
-      text-align: center;
-      padding: 20px;
-      margin-top: 30px;
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
+  <div class="container">
+    <div class="heart"></div>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>You Are My World</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #ffdde1, #ee9ca7);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', sans-serif;
+    }
 
-  <header>
-    <img src="images.jpg"alt="Student Photo">
-    <h1>MOHAMMED Kaif</h1>
-    <p>Computer Science Student | software Developer</p>
-  </header>
+    .container {
+      text-align: center;
+      color: white;
+      animation: fadeIn 3s ease-in-out;
+    }
 
-  <section>
-    <h2>About Me</h2>
-    <p>Hello! I'm Jane Doe, a passionate student pursuing a degree in Computer Science. I love building beautiful and functional web applications. I'm currently focused on software developer, UI/UX design, and learning modern JavaScript frameworks.</p>
-  </section>
+    h1 {
+      font-size: 3em;
+      margin: 20px 0;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
 
-  <section>
-    <h2>Skills</h2>
-    <div class="skills">
-      <span>HTML</span>
-      <span>CSS</span>
-      <span>JavaScript</span>
-      <span>React</span>
-      <span>Bootstrap</span>
-      <span>Git</span>
-    </div>
-  </section>
+    .heart {
+      width: 100px;
+      height: 90px;
+      position: relative;
+      display: inline-block;
+      animation: beat 1s infinite;
+    }
 
-  <section>
-    <h2>Projects</h2>
-    <div class="projects">
-      <div class="project-card">
-        <h3>Portfolio Website</h3>
-        <p>A responsive portfolio to showcase my work and skills using HTML, CSS, and JavaScript.</p>
-      </div>
-      <div class="project-card">
-        <h3>Weather App</h3>
-        <p>Built with JavaScript and OpenWeather API to show current weather data of any city.</p>
-      </div>
-      <div class="project-card">
-        <h3>Todo List</h3>
-        <p>A simple and interactive todo list application with localStorage support.</p>
-      </div>
-    </div>
-  </section>
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 90px;
+      background: red;
+      border-radius: 50px 50px 0 0;
+      top: 0;
+      left: 0;
+    }
 
-  <section class="contact">
-    <h2>Contact Me</h2>
-    <form id="contactForm">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea rows="4" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
+    .heart::after {
+      left: 50px;
+    }
 
-  <footer>
-    <p>&copy; 2025 MOHAMMED KAIF | All rights reserved.</p>
-  </footer>
+    .heart {
+      transform: rotate(-45deg);
+      background: red;
+    }
 
-  <script>
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      alert("Thanks for reaching out! ill catch you soon.");
-      this.reset();
-    });
-  </script>
+    @keyframes beat {
+      0%, 100% {
+        transform: scale(1) rotate(-45deg);
+      }
+      50% {
+        transform: scale(1.2) rotate(-45deg);
+      }
+    }
 
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="heart"></div>
+    <h1>You Are My World MUMTAZ BEGUM💖</h1>
+  </div>
 </body>
 </html>
+
+
